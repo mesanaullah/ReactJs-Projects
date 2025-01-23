@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Messege from './components/Messege'
 
 function App() {
 
@@ -28,14 +29,19 @@ function App() {
     )
   }
 
+
+
   return (
     <>
-      <h1>{Count}</h1>
-      <div className="btn">
-        <button onClick={Add} >Add</button>
-        <button onClick={Delete} >Delete</button>
+      <Messege coder="Sanaullah" />
+      <div className="">
+        <h1 className='p-10 text-green-400'>{Count}</h1>
+        <div className="btn">
+          <button className="bg-green-400 rounded-xl" onClick={Add} >Add</button>
+          <button className="bg-green-400 rounded-xl" onClick={Delete} >Delete</button>
+        </div>
+        <button className="bg-green-400 rounded-xl" onClick={Reset}>Reset</button>
       </div>
-      <button onClick={Reset} >Reset</button>
     </>
   )
 }
